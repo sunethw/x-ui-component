@@ -10,7 +10,7 @@ import { XSelectComponent } from './x-select/x-select.component';
 import { XFormFieldDirective } from './directives/x-form-field.directive';
 import { ButtonModule } from 'primeng/button';
 import { CheckboxModule } from 'primeng/checkbox';
-
+import { InputTextModule } from 'primeng/inputtext';
 import { DropdownModule } from 'primeng/dropdown';
 import { CalendarModule } from 'primeng/calendar';
 
@@ -36,7 +36,7 @@ import { FormElementFilterPipe } from './pipes/form-element-filter.pipe';
     FormsModule,
     ButtonModule,
     CheckboxModule,
-
+  InputTextModule,
     DropdownModule,
     CalendarModule,
 

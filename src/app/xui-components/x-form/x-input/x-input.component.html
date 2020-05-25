@@ -1,7 +1,7 @@
 <div class="x-form form-input mt-4" [formGroup]="group">
   <span class="ui-float-label">
     <input [formControlName]="config.name" [value]="config.value|| '' " id="float-input" type="text" pInputText>
-    <label for="float-input">{{ config.label | translate }}</label>
+    <label for="float-input">{{ config.label }}</label>
     <div *ngIf="config.errors" class="alert-danger">
       {{ config.errors }}
     </div>
