@@ -11,6 +11,16 @@ import { Router } from '@angular/router';
 })
 export class AppComponent implements OnInit, AfterViewInit  {
   name = 'Angular ' ;
+    addButton: boolean;
+  taskEdit: boolean;
+  taskDelete: boolean;
+
+
+  rows: any[];
+  url: string;
+  columns: any[];
+  title: string;
+
 
   @ViewChild('surveyGeneralDetails', { static: true }) form: XFormComponent;
   configSurvey = [
@@ -68,7 +78,44 @@ export class AppComponent implements OnInit, AfterViewInit  {
   }
 
   ngOnInit(): void {
-    //this.configEmailTemplate = this.configEmailTemplate.concat(this.customAttributes);
+    //this.Template = this.Template2.concat(this.customAttributes);
+    this.title = 'Survey List';
+    this.url = 'create-survey';
+    this.columns = [
+      { name: 'Id', attr: 'id', type: 'string' },
+      { name: 'Description', attr: 'description', type: 'string' },
+      { name: 'Employee', attr: 'employee', type: 'string' }
+    ];
+    this.rows = [
+      { id: '1', 'agentId': 'Agensdasdat Id', 'description': 'agdasdsadentId', 'employee': 'string' },
+      { id: '1', 'agentId': 'Agent Id', 'description': 'agentId', 'employee': 'string' },
+      { id: '1', 'agentId': 'Agent Id', 'description': 'agentId', 'employee': 'string' },
+      { id: '1', 'agentId': 'Agent Id', 'description': 'agentId', 'employee': 'string' },
+      { id: '1', 'agentId': 'Agent Id', 'description': 'agentId', 'employee': 'string' },
+      { id: '1', 'agentId': 'Agent Id', 'description': 'agentId', 'employee': 'string' },
+      { id: '1', 'agentId': 'Agent Id', 'description': 'agentId', 'employee': 'string' },
+      { id: '1', 'agentId': 'Agent Id', 'description': 'agentId', 'employee': 'string' },
+      { id: '1', 'agentId': 'Agent Id', 'description': 'agentId', 'employee': 'string' },
+      { id: '1', 'agentId': 'Agent Id', 'description': 'agentId', 'employee': 'string' },
+      { id: '1', 'agentId': 'Agent Id', 'description': 'agentId', 'employee': 'string' },
+      { id: '1', 'agentId': 'Agent Id', 'description': 'agentId', 'employee': 'string' },
+      { id: '1', 'agentId': 'Agent Id', 'description': 'agentId', 'employee': 'string' },
+      { id: '1', 'agentId': 'Agent Id', 'description': 'agentId', 'employee': 'string' },
+      { id: '1', 'agentId': 'Agent Id', 'description': 'agentId', 'employee': 'string' },
+      { id: '1', 'agentId': 'Agent Id', 'description': 'agentId', 'employee': 'string' },
+      { id: '1', 'agentId': 'Agent Id', 'description': 'agentId', 'employee': 'string' },
+      { id: '1', 'agentId': 'Agent Id', 'description': 'agentId', 'employee': 'string' },
+      { id: '1', 'agentId': 'Agent Id', 'description': 'agentId', 'employee': 'string' },
+      { id: '1', 'agentId': 'Agent Id', 'description': 'agentId', 'employee': 'string' },
+      { id: '1', 'agentId': 'Agent Id', 'description': 'agentId', 'employee': 'string' },
+      { id: '1', 'agentId': 'Agent Id', 'description': 'agentId', 'employee': 'string' },
+      { id: '1', 'agentId': 'Agent Id', 'description': 'agentId', 'employee': 'string' },
+      { id: '1', 'agentId': 'Agent Id', 'description': 'agentId', 'employee': 'string' },
+      { id: '1', 'agentId': 'Agent Id', 'description': 'agentId', 'employee': 'string' },
+      { id: '1', 'agentId': 'Agent Id', 'description': 'agentId', 'employee': 'string' },
+      { id: '1', 'agentId': 'Agent Id', 'description': 'agentId', 'employee': 'string' },
+      { id: '1', 'agentId': 'Agent Id', 'description': 'agentId', 'employee': 'string' },
+    ];
   }
   ngAfterViewInit() {
 

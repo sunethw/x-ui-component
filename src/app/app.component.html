@@ -6,3 +6,10 @@
 <app-x-form #surveyGeneralDetails [config]="configSurvey" (submit)="submitSurvey($event)">
 </app-x-form>
   {{ form.value | json }}
+
+  <br>
+  <br>
+
+  <app-x-data-table [taskEdit]="taskEdit" [taskDelete]="taskDelete" [addButton]="addButton" [title]="title" [url]="url"
+  [columns]="columns" [rows]="rows">
+</app-x-data-table>
