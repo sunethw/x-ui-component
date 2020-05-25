@@ -1,7 +1,5 @@
 import { Component, OnInit, Input, EventEmitter, Output, OnChanges } from '@angular/core';
 
-import { Router } from '@angular/router';
-
 @Component({
   selector: 'app-x-data-table',
   templateUrl: './x-data-table.component.html'
@@ -46,7 +44,7 @@ export class XDataTableComponent implements OnInit, OnChanges {
   public tempArray: any[];
   public resultArray: any[];
 
-  constructor(private router: Router) {
+  constructor() {
     this.isValid = true;
     this.isInit = false;
     this.rows = [];
@@ -76,7 +74,7 @@ export class XDataTableComponent implements OnInit, OnChanges {
 
   createNew() {
     console.log(this.url);
-    this.router.navigateByUrl(this.url);
+  
   }
 
 }

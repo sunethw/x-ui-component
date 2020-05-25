@@ -28,16 +28,24 @@ export class AppComponent implements OnInit, AfterViewInit  {
       type: 'input',
       disabled: false,
       value: '',
-      label: 'Name',
-      name: 'name',
+      label: 'ID',
+      name: 'id',
       validation: [Validators.required],
     },
     {
       type: 'input',
       disabled: false,
       value: '',
-      label: 'username',
-      name: 'owner',
+      label: 'Description',
+      name: 'description',
+      validation: [Validators.required],
+    },
+     {
+      type: 'input',
+      disabled: false,
+      value: '',
+      label: 'Employee',
+      name: 'employee',
       validation: [Validators.required],
     },
 
@@ -54,11 +62,11 @@ export class AppComponent implements OnInit, AfterViewInit  {
         { value: 3, label: 'Pão de Milho' },
         { value: 4, label: 'Café' }
       ],
-      validation: [Validators.required]
+   
     },
       {
       type: 'datepicker',
-      name: 'Enter date',
+      name: 'date',
       label: 'Selecione a data',
       minDate: '2020-05-22',
       maxDate: '2020-12-20'
@@ -132,6 +140,7 @@ export class AppComponent implements OnInit, AfterViewInit  {
 
   submitSurvey(value) {
     console.log(value);
+    localStorage.setItem('users', JSON.stringify(value));
  
   }
 }

@@ -1,7 +1,7 @@
 <!-- search module: accepts two parameters -->
 <div class="row mt-2">
-  <button type="button" class="btn cur-p btn-primary" (click)="createNew()" routerLinkActive="router-link-active">Create
-    {{addButton}}</button>
+  <!-- <button type="button" class="btn cur-p btn-primary" (click)="createNew()" routerLinkActive="router-link-active">Create
+    {{addButton}}</button> -->
 </div>
 <div class="row mt-2">
   <app-search [terms]="resultArray" [parameters]="columns" (onFilter)="reDraw($event)">
