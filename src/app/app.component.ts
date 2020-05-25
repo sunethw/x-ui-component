@@ -12,20 +12,20 @@ import { Router } from '@angular/router';
 export class AppComponent implements OnInit, AfterViewInit  {
   name = 'Angular ' ;
 
-  @ViewChild('surveyGeneralDetails', { static: false }) form: XFormComponent;
+  @ViewChild('surveyGeneralDetails', { static: true }) form: XFormComponent;
   configSurvey = [
     {
       type: 'input',
       disabled: false,
       value: '',
-      label: 'name',
-      name: 'surveyTitle',
+      label: 'Name',
+      name: 'name',
       validation: [Validators.required],
     },
     {
       type: 'input',
       disabled: false,
-      value: 'logged in user',
+      value: '',
       label: 'username',
       name: 'owner',
       validation: [Validators.required],
@@ -48,7 +48,7 @@ export class AppComponent implements OnInit, AfterViewInit  {
     },
       {
       type: 'datepicker',
-      name: 'data',
+      name: 'Enter date',
       label: 'Selecione a data',
       minDate: '2020-05-22',
       maxDate: '2020-12-20'
