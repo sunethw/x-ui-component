@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { XFormField } from '../models/x-form-field';
 import { XFormFieldConfig } from '../models/x-form-field-config';
-import * as moment from 'moment';
+import moment from 'moment';
 
 @Component({
   selector: 'app-x-calendar',

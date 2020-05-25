@@ -2,8 +2,12 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http'
-import { InputTextModule, MultiSelectModule, DropdownModule } from 'primeng';
-import { TranslateModule } from '@ngx-translate/core';
+import { ButtonModule } from 'primeng/button';
+import { MultiSelectModule } from 'primeng/multiselect';
+import { InputTextModule } from 'primeng/inputtext';
+import { DropdownModule } from 'primeng/dropdown';
+
+
 
 import { SearchComponent } from './search.component';
 
@@ -11,11 +15,11 @@ import { SearchComponent } from './search.component';
 	imports: [
 		BrowserModule,
 		FormsModule,
+    ButtonModule,
 		MultiSelectModule,
 		InputTextModule,
 		DropdownModule,
-		HttpClientModule,
-		TranslateModule
+		HttpClientModule
 
 	],
 	declarations: [
@@ -23,7 +27,7 @@ import { SearchComponent } from './search.component';
 	],
 	exports: [
 		SearchComponent,
-		TranslateModule
+
 	]
 })
 export class SearchModule { }

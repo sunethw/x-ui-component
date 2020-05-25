@@ -8,8 +8,12 @@ import { XCalendarComponent } from './x-calendar/x-calendar.component';
 import { XCheckboxComponent } from './x-checkbox/x-checkbox.component';
 import { XSelectComponent } from './x-select/x-select.component';
 import { XFormFieldDirective } from './directives/x-form-field.directive';
-import { PasswordModule, InputTextModule, PanelModule, ButtonModule, CheckboxModule, DropdownModule, CalendarModule } from 'primeng';
-import { TranslateModule } from '@ngx-translate/core';
+import { ButtonModule } from 'primeng/button';
+import { CheckboxModule } from 'primeng/checkbox';
+import { InputTextModule } from 'primeng/inputtext';
+import { DropdownModule } from 'primeng/dropdown';
+import { CalendarModule } from 'primeng/calendar';
+
 import { FormElementFilterPipe } from './pipes/form-element-filter.pipe';
 //import { FormElementRemoveFilterPipe } from './pipes/form-element-remove-filter.pipe';
 
@@ -30,19 +34,17 @@ import { FormElementFilterPipe } from './pipes/form-element-filter.pipe';
     CommonModule,
     ReactiveFormsModule,
     FormsModule,
-    PasswordModule,
     InputTextModule,
-    PanelModule,
     ButtonModule,
     CheckboxModule,
     InputTextModule,
     DropdownModule,
     CalendarModule,
-    TranslateModule
+
   ],
   exports: [
     XFormComponent,
-    TranslateModule
+   
   ],
   entryComponents: [
     XButtonComponent,

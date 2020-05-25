@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, EventEmitter, Output, OnChanges } from '@angular/core';
 
 import { Router } from '@angular/router';
-import { FilterUtils } from 'primeng/utils';
+
 @Component({
   selector: 'app-x-data-table',
   templateUrl: './x-data-table.component.html'
