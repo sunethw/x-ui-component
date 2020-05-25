@@ -18,7 +18,7 @@ export class AppComponent implements OnInit, AfterViewInit  {
       type: 'input',
       disabled: false,
       value: '',
-      label: 'CREATESURVEYS.SURVEYTITLE',
+      label: 'name',
       name: 'surveyTitle',
       validation: [Validators.required],
     },
@@ -26,7 +26,7 @@ export class AppComponent implements OnInit, AfterViewInit  {
       type: 'input',
       disabled: false,
       value: 'logged in user',
-      label: 'CREATESURVEYS.OWNER',
+      label: 'username',
       name: 'owner',
       validation: [Validators.required],
     },
@@ -35,7 +35,7 @@ export class AppComponent implements OnInit, AfterViewInit  {
       type: 'select',
       disabled: false,
       value: 4,
-      placeholder: 'Selecione sua comida favorita',
+      placeholder: 'select a food',
       label: 'Favourite Food',
       name: 'food',
       options: [
@@ -46,13 +46,7 @@ export class AppComponent implements OnInit, AfterViewInit  {
       ],
       validation: [Validators.required]
     },
-    {
-      type: 'datepicker',
-      name: 'data',
-      label: 'Selecione a data',
-      minDate: '2020-05-22',
-      maxDate: '2020-12-20'
-    },
+  
     {
       type: 'input',
       disabled: false,
@@ -69,56 +63,15 @@ export class AppComponent implements OnInit, AfterViewInit  {
     },
   ];
 
-  configEmailTemplate = [
-    {
-      type: 'input',
-      disabled: false,
-      value: 'Mikael Boff',
-      label: 'LOGIN.TITLE',
-      name: 'username',
-      validation: [Validators.required, Validators.minLength(4)],
-    },
-    {
-      type: 'input',
-      disabled: false,
-      value: 'Mikael Boff',
-      label: 'Password',
-      name: 'password',
-      validation: [Validators.required, Validators.minLength(4)],
-    },
-    {
-      label: 'Submit',
-      name: 'submit',
-      type: 'button',
-      disabled: false
-    },
-  ];
 
-  customAttributes = [
-    {
-      type: 'input',
-      disabled: false,
-      value: 'Mikael Boff',
-      label: 'LOGIN.TITLE',
-      name: 'usernamedd',
-      validation: [Validators.required, Validators.minLength(4)],
-    },
-    {
-      type: 'input',
-      disabled: false,
-      value: 'Mikael Boff',
-      label: 'Password',
-      name: 'passwordddd',
-      validation: [Validators.required, Validators.minLength(4)],
-    },
 
-  ];
 
-  constructor(private router: Router) {
+
+  constructor() {
   }
 
   ngOnInit(): void {
-    this.configEmailTemplate = this.configEmailTemplate.concat(this.customAttributes);
+    //this.configEmailTemplate = this.configEmailTemplate.concat(this.customAttributes);
   }
   ngAfterViewInit() {
 
@@ -135,16 +88,6 @@ export class AppComponent implements OnInit, AfterViewInit  {
 
   submitSurvey(value) {
     console.log(value);
-    // this.userService.register(value)
-    //   .pipe(first())
-    //   .subscribe(
-    //     data => {
-    //       //this.alertService.success('Registration successful', true);
-    //       this.messageService.add({ summary: 'toast here', severity: 'warn', sticky: true });
-    //       this.router.navigate(['/login']);
-    //     },
-    //     error => {
-    //       this.alertService.error(error);
-    //     });
+ 
   }
 }
