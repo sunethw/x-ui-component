@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 export class AppComponent implements OnInit, AfterViewInit  {
   name = 'Angular ' ;
 
-  @ViewChild('surveyGeneralDetails', { static: false }) formSurvey: XFormComponent;
+  @ViewChild('surveyGeneralDetails', { static: false }) form: XFormComponent;
   configSurvey = [
     {
       type: 'input',
@@ -64,9 +64,6 @@ export class AppComponent implements OnInit, AfterViewInit  {
   ];
 
 
-
-
-
   constructor() {
   }
 
@@ -75,15 +72,15 @@ export class AppComponent implements OnInit, AfterViewInit  {
   }
   ngAfterViewInit() {
 
-    let previousValid = this.formSurvey.valid;
-    this.formSurvey.changes.subscribe(() => {
-      if (this.formSurvey.valid !== previousValid) {
-        previousValid = this.formSurvey.valid;
-        this.formSurvey.setDisabled('submit', !previousValid);
+    let previousValid = this.form.valid;
+    this.form.changes.subscribe(() => {
+      if (this.form.valid !== previousValid) {
+        previousValid = this.form.valid;
+        this.form.setDisabled('submit', !previousValid);
       }
     });
 
-    this.formSurvey.setDisabled('submit', true);
+    this.form.setDisabled('submit', true);
   }
 
   submitSurvey(value) {
