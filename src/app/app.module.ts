@@ -4,10 +4,13 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
+//shared UI components
+import { XFormModule } from './xui-components/x-form/x-form.module';
+import { XDataTableModule } from './xui-components/x-data-table/x-data-table.module';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent ],
-  bootstrap:    [ AppComponent ]
+  imports: [BrowserModule, FormsModule, XFormModule, XDataTableModule],
+  declarations: [AppComponent, HelloComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

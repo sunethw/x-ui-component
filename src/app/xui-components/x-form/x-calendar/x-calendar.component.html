@@ -1,0 +1,7 @@
+<div class="form-calendar mt-4" [formGroup]="group">
+  <span class="ui-float-label">
+    <p-calendar [formControlName]="config.name" [minDate]="minDate" [maxDate]="maxDate" [locale]="ptbr"
+      dateFormat="dd/mm/yy" readonlyInput="true" showIcon="true" dataType="string"></p-calendar>
+    <label for="float-input">{{ config.label }}</label>
+  </span>
+</div>

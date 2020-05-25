@@ -1,0 +1,12 @@
+<div class="row">
+  <span class="ui-float-label">
+    <p-multiSelect [options]="parameters" [(ngModel)]="selectedParameters" optionLabel="name" id="search-filter">
+    </p-multiSelect>
+    <label for="search-filter">{{ "DATATABLE.SEARCHBAR.TITLE" | translate }}</label>
+  </span>
+  <span class="ui-float-label">
+    <input placeholder="Search" (keyup)="search($event.target.value)" type="text" autocomplete="off" id="search-input"
+      aria-controls="XDataTable" [disabled]="selectedParameters.length == 0" pInputText>
+    <label for="search-input">{{ "DATATABLE.SEARCHBAR.TITLE" | translate }}</label>
+  </span>
+</div>

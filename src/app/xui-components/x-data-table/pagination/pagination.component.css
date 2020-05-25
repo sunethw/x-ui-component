@@ -1,0 +1,11 @@
+.selected {
+  background-color: #9c27b0 !important;
+  color: white !important;
+}
+
+.disabled {
+  color: #777;
+  cursor: not-allowed !important;
+  background-color: #fff;
+  border-color: #ddd;
+}

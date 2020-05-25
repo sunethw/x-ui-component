@@ -1,0 +1,53 @@
+<ul class="nav nav-pills nav-pills-info">
+	<li>
+		<!-- display first-most element -->
+		<a [class.disabled]="selectedPage == 1 ? true : null" (click)="getFirst()">
+			first page
+		</a>
+	</li>
+	<li>
+		<!-- display previous element in line-->
+		<a data-toggle="tab" [class.disabled]="selectedPage == 1 ? true : null" (click)="previousPage(selectedPage)">
+			<i class="fa fa-caret-square-o-left"></i>
+		</a>
+	</li>
+	<!-- select page as default selected page -->
+	<li *ngFor="let page of pages | slice:head:tail">
+		<a data-toggle="tab" [class.selected]="page === selectedPage" (click)="currentData(page)">
+			{{ page }}
+		</a>
+	</li>
+	<li>
+		<!-- display next element in line -->
+		<a data-toggle="tab" [class.disabled]="selectedPage == pages.length ? true : null"
+			(click)="nextPage(selectedPage)">
+			<i class="fa fa-caret-square-o-right"></i>
+		</a>
+	</li>
+	<li>
+		<!-- display final element-->
+		<a data-toggle="tab" [class.disabled]="selectedPage == pages.length ? true : null" (click)="getLast()">
+			last page
+		</a>
+	</li>
+</ul>
+
+
+<div class="dataTables_wrapper">
+	<div class="dataTables_paginate paging_simple_numbers" id="dataTable_paginate">
+		<a class="paginate_button previous disabled" aria-controls="dataTable" data-dt-idx="0" tabindex="0"
+			id="dataTable_previous" (click)="previousPage(selectedPage)">Previous</a>
+		<span>
+			<a *ngFor="let page of pages | slice:head:tail" [class.current]="page === selectedPage"
+				(click)="currentData(page)" class="paginate_button" aria-controls="dataTable" data-dt-idx="1"
+				tabindex="0">{{ page }}</a>
+			<a class="paginate_button " aria-controls="dataTable" data-dt-idx="2" tabindex="0">2</a>
+			<a class="paginate_button " aria-controls="dataTable" data-dt-idx="3" tabindex="0">3</a>
+			<a class="paginate_button " aria-controls="dataTable" data-dt-idx="4" tabindex="0">4</a>
+			<a class="paginate_button " aria-controls="dataTable" data-dt-idx="5" tabindex="0">5</a>
+			<a class="paginate_button " aria-controls="dataTable" data-dt-idx="6" tabindex="0">6</a>
+		</span>
+		<a class="paginate_button next" aria-controls="dataTable" data-dt-idx="7" tabindex="0" id="dataTable_next"
+			(click)="nextPage(selectedPage)">Next</a>
+	</div>
+</div>
