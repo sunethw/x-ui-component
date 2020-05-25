@@ -22,7 +22,7 @@ export class AppComponent implements OnInit, AfterViewInit  {
   title: string;
 
 
-  @ViewChild('surveyGeneralDetails', { static: true }) form: XFormComponent;
+  @ViewChild(XFormComponent, { static: true }) form: XFormComponent;
   configSurvey = [
     {
       type: 'input',
